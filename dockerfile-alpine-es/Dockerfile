@@ -63,12 +63,14 @@ RUN set -ex; \
 #    plugin install mobz/elasticsearch-head; \
 	fi
 
+# 复制config文件夹到容器
 COPY config ./config
 
 VOLUME /usr/share/elasticsearch/data
 
 COPY docker-entrypoint.sh /
 
+# 容器需要开放ES的9200和9300端口
 EXPOSE 9200 9300
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["elasticsearch"]
