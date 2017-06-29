@@ -1,6 +1,15 @@
+# es 1.x 2.x
+#network.host: 0.0.0.0
+#discovery.zen.ping.multicast.enabled: false
+#discovery.zen.ping_timeout: 120s
+#discovery.zen.minimum_master_nodes: 2 #至少要发现集群可做master的节点数，
+#client.transport.ping_timeout: 60s
+#discovery.zen.ping.unicast.hosts: ["172.17.0.2", "172.17.0.3"]
+
+# es 5.x
+# allow origin
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+
 network.host: 0.0.0.0
-discovery.zen.ping.multicast.enabled: false
-discovery.zen.ping_timeout: 120s
-discovery.zen.minimum_master_nodes: 2 #至少要发现集群可做master的节点数，
-client.transport.ping_timeout: 60s
 discovery.zen.ping.unicast.hosts: ["172.17.0.2", "172.17.0.3"]

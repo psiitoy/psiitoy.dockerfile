@@ -19,9 +19,11 @@ RUN apk add --no-cache 'su-exec>=0.2' bash
 WORKDIR /usr/share/elasticsearch
 # [ENV]（用于设置环境变量）  构建指令，在image中设置一个环境变量。
 ENV PATH /usr/share/elasticsearch/bin:$PATH
-ENV ELASTICSEARCH_VERSION 2.4.5
+#ENV ELASTICSEARCH_VERSION 2.4.5
+ENV ELASTICSEARCH_VERSION 2.1.2
+#ENV ELASTICSEARCH_VERSION 5.4.2
 
-ENV ES_PKG_NAME elasticsearch-2.4.5
+ENV ES_PKG_NAME elasticsearch-$ELASTICSEARCH_VERSION
 ADD $ES_PKG_NAME/ /usr/share/elasticsearch
 
 RUN set -ex; \
