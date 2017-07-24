@@ -72,10 +72,11 @@ COPY config ./config
 # 我们知道容器使用的是AUFS，这种文件系统不能持久化数据，当容器关闭后，所有的更改都会丢失。当容器中的应用有持久化数据的需求时可以在Dockerfile中使用该指令。
 # 加上VOLUME 这样es 的 data文件夹下的内容可以持久化了
 VOLUME /usr/share/elasticsearch/data
+VOLUME /usr/share/elasticsearch/logs
 
 COPY docker-entrypoint.sh /
 
 # 容器需要开放ES的9200和9300端口
-EXPOSE 9200 9300
+EXPOSE 9200 9300 8300
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["elasticsearch"]

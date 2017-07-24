@@ -46,6 +46,8 @@
 # hasn't been done, we assume that this is not a packaged version and the
 # user has forgotten to run Maven to create a package.
 
+#export JAVA_OPTS="-agentlib:jdwp=transport=dt_socket,address=45952,suspend=n,server=y"
+
 IS_PACKAGED_VERSION='distributions'
 if [ "$IS_PACKAGED_VERSION" != "distributions" ]; then
     cat >&2 << EOF
