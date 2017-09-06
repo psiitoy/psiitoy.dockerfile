@@ -1,7 +1,7 @@
 @echo off
 
 SETLOCAL enabledelayedexpansion
-TITLE Elasticsearch 2.1.2
+TITLE Elasticsearch 2.1.2-SNAPSHOT
 
 SET params='%*'
 

@@ -94,3 +94,12 @@
 # Require explicit names when deleting indices:
 #
 # action.destructive_requires_name: true
+
+path.logs: /usr/share/elasticsearch/logs
+path.data: /usr/share/elasticsearch/data
+
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+
+network.host: 0.0.0.0
+#discovery.zen.ping.unicast.hosts: ["172.17.0.2", "172.17.0.3"]

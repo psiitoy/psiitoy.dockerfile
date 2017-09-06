@@ -4,5 +4,8 @@ path.data: /usr/share/elasticsearch/data
 http.cors.enabled: true
 http.cors.allow-origin: "*"
 
+node.data: true
+node.master: true
+
 network.host: 0.0.0.0
 discovery.zen.ping.unicast.hosts: ["172.17.0.2", "172.17.0.3"]
